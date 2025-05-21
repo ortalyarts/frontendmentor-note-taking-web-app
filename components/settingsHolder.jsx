@@ -5,11 +5,11 @@ import { setPreferencesCookie } from '@/lib/cookie.js'
 
 import IconArrowRight from "@/components/UI/iconArrowRight.jsx";
 import IconColorTheme from '@/components/UI/iconColorTheme.jsx';
-import IconDarkTheme from '@/components/UI/IconDarkTheme.jsx';
-import IconNoTheme from '@/components/UI/IconNoTheme.jsx';
+import IconDarkTheme from '@/components/UI/iconDarkTheme.jsx';
+import IconNoTheme from '@/components/UI/iconNoTheme.jsx';
 import IconFontTheme from '@/components/UI/iconFontTheme.jsx';
-import IconPassword from '@/components/UI/IconPassword.jsx';
-import IconLogout from '@/components/UI/IconLogout.jsx';
+import IconPassword from '@/components/UI/iconPassword.jsx';
+import IconLogout from '@/components/UI/iconLogout.jsx';
 import IconFontMonospace from '@/components/UI/iconFontMonospace.jsx';
 import IconFontSansSerif from '@/components/UI/iconFontSansSerif.jsx';
 import IconFontSerif from '@/components/UI/iconFontSerif.jsx';
