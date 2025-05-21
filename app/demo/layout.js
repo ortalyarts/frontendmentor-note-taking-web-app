@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth.js";
 import { getServerSideProps } from '@/lib/util.js';
 import NoteLayout from "@/components/noteLayout";
 import Link from "next/link";
+import { prisma } from '@/lib/prisma';
 
 export default async function DemoLaout({ children }) {
 

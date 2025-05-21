@@ -2,6 +2,7 @@ import { auth } from "@/lib/auth.js";
 import { getServerSideProps } from '@/lib/util.js';
 import SettingsLayout from "@/components/settingsLayout";
 import Link from "next/link";
+import { prisma } from '@/lib/prisma';
 
 export default async function Settings () {
     const session = await auth();

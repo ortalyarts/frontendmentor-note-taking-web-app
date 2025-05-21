@@ -1,5 +1,6 @@
 import NewNote from "@/components/newNote";
 import { auth } from "@/lib/auth.js";
+import { prisma } from '@/lib/prisma';
 
 export default async function NotePage (){
     const session = await auth();
