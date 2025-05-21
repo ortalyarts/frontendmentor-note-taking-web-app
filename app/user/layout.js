@@ -1,16 +1,35 @@
 
+import { auth } from "@/lib/auth.js";
 import { getServerSideProps } from '@/lib/util.js';
 import NoteLayout from "@/components/noteLayout";
+import Link from "next/link";
 
 export default async function User({ children }) {
+    const session = await auth();
+    // if not authorized tryes to visit the page
+    if (!session?.user?.id) {
+        return (
+        <main className="wrong-page">
+            <h1 className="text-3">You must be signed in to view this content.</h1>
+            <Link href="/login" className="btn-main">Sign in</Link>
+        </main>)
+    }
+    // Fetch user from DB using email (recommended unique identifier)
+    const user = await prisma.user.findUnique({
+        where: { email: session.user.email },
+    });
 
-    const userId = 'dbd9532e-9f89-4f17-bd5d-8d37947c045d'; // Replace with actual user ID
+    const userId = user?.id;
     const {notes} = await getServerSideProps(userId);
-
-    // const { userId } = params; // To implement with Auth
     
     // group all user tags
-    const userTags = notes.map(note => note.tags).toString().split(","); 
+
+    const userTags = notes
+    .map(note => note.tags)
+    .toString()
+    .split(",")
+    .map(tag => tag.trim().toLowerCase());
+
     const uniqueTags = [...new Set(userTags)] // remove duplicates
 
     return(

@@ -11,6 +11,8 @@ export async function POST(req){
     console.log(body);
     return NextResponse.json({body});
 }
+
+
 // export async function POST(req){
 //     const body = await req.json();
 //     const headers = req.headers.get("auth");
