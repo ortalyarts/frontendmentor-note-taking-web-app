@@ -94,9 +94,13 @@ export default function NewNote({userId}) {
     <Modal open={modalIsOpen} onClose={handleCloseModal}>
         <div className="modal-holder note-saved"> 
             <button type='button' className='close-modal' aria-label="Close modal" onClick={handleCloseModal}>
-                <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M12.657.843a1.5 1.5 0 010 2.121L9.12 6.5l3.536 3.536a1.5 1.5 0 11-2.121 2.12L7 8.622l-3.536 3.536a1.5 1.5 0 11-2.12-2.121L4.877 6.5 1.343 2.964A1.5 1.5 0 113.464.844L7 4.377 10.536.843a1.5 1.5 0 012.12 0z" fill="black" fillRule="evenodd"/></svg>
-            </button>            
-            <h2 className="text-3" aria-live="assertive">Note saved successfully!</h2>
+                <span className="icon-fill" aria-hidden="true">
+                    <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M12.657.843a1.5 1.5 0 010 2.121L9.12 6.5l3.536 3.536a1.5 1.5 0 11-2.121 2.12L7 8.622l-3.536 3.536a1.5 1.5 0 11-2.12-2.121L4.877 6.5 1.343 2.964A1.5 1.5 0 113.464.844L7 4.377 10.536.843a1.5 1.5 0 012.12 0z" fillRule="evenodd"/></svg>
+                </span>
+            </button>     
+            <div className='modal-text'>       
+                <h2 className="text-3" aria-live="assertive">Note saved successfully!</h2>
+            </div>
         </div>
     </Modal>
     <form onSubmit={saveNote} className="note-form">

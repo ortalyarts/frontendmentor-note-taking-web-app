@@ -843,7 +843,7 @@ li:has(+ li .note-item:hover) .note-item, li:has(+ li .note-item.active) .note-i
   border-radius: var(--border-radius);
 }
 .modal-holder {
-  background: var(--neutral-0);
+  background: var(--neutral-100);
   width:95%;
   max-width: 27.5rem;
   border-radius: var(--border-radius);
@@ -1151,4 +1151,22 @@ main.wrong-page .btn-main{
     background: var(--neutral-0);
     padding-bottom: 0;
   }
+}
+
+/* ANIMATION */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  @keyframes slide-down-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
 }
