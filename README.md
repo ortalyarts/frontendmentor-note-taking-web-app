@@ -65,6 +65,8 @@ Users should be able to:
 - isomorphic-dompurify - to sanitize user created content
 - [react-responsive](https://www.npmjs.com/package/react-responsive) - React package to render different layouts depending on the screen size
 - zustand - React package to share state variables between components
+- PerfectPixel - Chrome extention to check the UI
+- ChromeVOIX - Screen Reader - Chrome extention to check the accessibility
 
 ## Author
 
