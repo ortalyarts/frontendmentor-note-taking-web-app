@@ -684,6 +684,9 @@ input[type="text"].search-input {
   padding-left: 3rem;
   color: var(--neutral-950);
 }
+input[type="text"].search-input::placeholder{
+  color: var(--neutral-800);
+}
 .tags-note-buttons {
   display: flex;
   align-items: stretch;
